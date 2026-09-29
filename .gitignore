@@ -1,0 +1,29 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.db
+.pytest_cache/
+node_modules/
+dist/
+.ipynb_checkpoints/
+data/uploads/*
+data/object_store/*
+backend/data/uploads/*
+backend/data/object_store/*
+backend/iprocurement_demo.db
+
+# Python virtual environments
+**/venv/
+**/.venv/
+
+# Virtual environments
+**/venv/
+**/.venv/
+# Frontend dependencies
+**/node_modules/
+# Build/cache
+**/dist/
+**/__pycache__/
+*.pyc

@@ -1,0 +1,28 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+pydantic-settings
+sqlalchemy>=2.0
+alembic
+python-jose[cryptography]
+passlib[argon2]
+argon2-cffi
+PyMuPDF
+pytesseract
+Pillow
+scikit-learn
+numpy
+python-dateutil
+openai
+pytest
+httpx
+email-validator
+
+# Optional: only needed if DATABASE_URL is switched from sqlite to postgres
+# (e.g. via docker-compose.yml). Not required for the SQLite demo.
+# psycopg[binary]
+# pgvector
+# redis and celery were listed previously but are not imported anywhere in the
+# codebase (WORKER_MODE=inline runs everything synchronously) -- removed to
+# reduce install time/risk for the 1-day build.

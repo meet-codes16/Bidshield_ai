@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.pytest_cache/
+data/uploads/*
+data/object_store/*
+.ipynb_checkpoints/
+venv/
+.venv/
+*.db
+node_modules/
