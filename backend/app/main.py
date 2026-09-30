@@ -1,4 +1,4 @@
-import uuid
+﻿import uuid
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -30,12 +30,8 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=list(dict.fromkeys(settings.CORS_ORIGINS + ["http://127.0.0.1:5173"])),
-    # Vite picks the next free port (5174, 5175, ...) whenever 5173 is already in use by
-    # another running instance, so also allow any localhost/127.0.0.1 dev port via regex --
-    # this stops CORS breaking every time a stray dev server is left running on 5173.
-    allow_origin_regex=r"^http://(localhost|127\.0\.0\.1):\d+$",
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -139,3 +135,4 @@ def startup():
     # This fallback makes the demo usable if migrations have not yet been run.
     Base.metadata.create_all(bind=engine)
     _ensure_demo_data()
+
